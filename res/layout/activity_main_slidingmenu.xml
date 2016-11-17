@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:lussac="http://schemas.android.com/apk/res/com.lussac.dscalculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <com.lussac.dscalculator.SlidingMenu
+        android:id="@+id/sliding_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        lussac:rightPadding="135dp">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            
+            <include layout="@layout/left_menu"/>
+            
+            <include layout="@layout/activity_main"/>
+        </LinearLayout>
+    </com.lussac.dscalculator.SlidingMenu>
+
+</RelativeLayout>

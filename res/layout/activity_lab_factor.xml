@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/btn_Lab_factorFind"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/blue_selector"
+            android:text="@string/factorize"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_Lab_factorNum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_Lab_factorFind"
+            android:background="#0DCFF6"
+            android:gravity="center"
+            android:hint="@string/pleaseInputNumber"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#66FFFF" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_Lab_factorResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="20dp"
+        android:text=" "
+        android:textColor="#0DCFF6"
+        android:textSize="20sp" />
+
+</LinearLayout>

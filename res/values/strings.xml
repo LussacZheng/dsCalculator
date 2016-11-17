@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">屌丝计算器</string>
+	<string name="calculator">计算器</string>
+	<string name="functionLab">功能实验室</string>
+	<string name="help">帮助</string>
+	<string name="about">关于</string>
+	<string name="aboutUpdate">更新说明</string>
+	<string name="exit">退出</string>
+	<string name="setting">设置</string>
+	<string name="multiplication_sign">×</string>
+	<string name="division_sign">÷</string>
+	<string name="Lab_prime">质数枚举</string>
+	<string name="findOut">查找</string>
+	<string name="pleaseInputUpperLimit">请输入上限</string>
+	<string name="listResults">枚举结果</string>
+	<string name="cleanScreen">清屏</string>
+	<string name="There_are_some_primes_between_a_and_b">[a,b] 内共有?个质数</string>
+	<string name="Lab_factor">质因数分解</string>
+	<string name="factorize">分解</string>
+	<string name="pleaseInputNumber">请输入数字</string>
+	<string name="Lab_random">随机数生成</string>
+	<string name="getRandom">生成</string>
+    
+</resources>
