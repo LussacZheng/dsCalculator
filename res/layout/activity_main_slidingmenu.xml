@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             
-            <include layout="@layout/left_menu"/>
+            <include layout="@layout/main_left_menu"/>
             
             <include layout="@layout/activity_main"/>
         </LinearLayout>

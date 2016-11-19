@@ -38,7 +38,7 @@ public class SlidingMenu extends HorizontalScrollView {
 	public SlidingMenu(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 
-		// »ñÈ¡¶¨ÒåµÄÊôÐÔ
+		// èŽ·å–å®šä¹‰çš„å±žæ€§
 		TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SlidingMenu, defStyleAttr, 0);
 
 		int n = a.getIndexCount();
@@ -46,7 +46,7 @@ public class SlidingMenu extends HorizontalScrollView {
 			int attr = a.getIndex(i);
 			switch (attr) {
 			case R.styleable.SlidingMenu_rightPadding:
-				// °Ñdp×ª»¯Îªpx
+				// æŠŠdpè½¬åŒ–ä¸ºpx
 				mMenuRightPadding = a.getDimensionPixelSize(attr, (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, context.getResources().getDisplayMetrics()));
 				break;
@@ -89,7 +89,7 @@ public class SlidingMenu extends HorizontalScrollView {
 	private boolean touchEvent_isLongTouched_flag, touchEvent_isLeftMoved_flag;
 
 	@Override
-	public boolean onTouchEvent(MotionEvent ev) {
+	public boolean onTouchEvent ( MotionEvent ev) {
 
 		switch (ev.getAction()) {
 		case MotionEvent.ACTION_DOWN:
@@ -107,7 +107,7 @@ public class SlidingMenu extends HorizontalScrollView {
 			}
 			break;
 		case MotionEvent.ACTION_UP:
-			// Òþ²ØÔÚ×ó±ßµÄ¿í¶È
+			// éšè—åœ¨å·¦è¾¹çš„å®½åº¦
 			int scrollX = getScrollX();
 			if (scrollX >= mMenuWidth / 2) {
 				this.smoothScrollTo(mMenuWidth, 0);
@@ -117,7 +117,7 @@ public class SlidingMenu extends HorizontalScrollView {
 				isLeftMenuOpen = true;
 			}
 			if (touchEvent_isLeftMoved_flag && !isLeftMenuOpen) {
-				Intent intent = new Intent(MainActivity.mainactivity, LabPrime_Activity.class);
+				Intent intent = new Intent(MainActivity.mainactivity, Lab_Activity.class);
 				MainActivity.mainactivity.startActivity(intent);
 				touchEvent_isLongTouched_flag = false;
 				touchEvent_isLeftMoved_flag = false;
@@ -145,7 +145,7 @@ public class SlidingMenu extends HorizontalScrollView {
 	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
 
 		super.onScrollChanged(l, t, oldl, oldt);
-		// µ÷ÓÃÊôÐÔ¶¯»­£¬ÉèÖÃTranslaionX
+		// è°ƒç”¨å±žæ€§åŠ¨ç”»ï¼Œè®¾ç½®TranslaionX
 		float scale = l * 1.0f / mMenuWidth;// 1~0
 		ViewHelper.setTranslationX(mMenu, mMenuWidth * scale);
 

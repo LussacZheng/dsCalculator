@@ -2,11 +2,14 @@
 <resources>
     
     <string name="app_name">屌丝计算器</string>
+	<string name="app_version">屌丝计算器 v0.3.2</string>
+	<string name="aboutUpdate">更新说明</string>
+	
+	
 	<string name="calculator">计算器</string>
 	<string name="functionLab">功能实验室</string>
 	<string name="help">帮助</string>
 	<string name="about">关于</string>
-	<string name="aboutUpdate">更新说明</string>
 	<string name="exit">退出</string>
 	<string name="setting">设置</string>
 	<string name="multiplication_sign">×</string>

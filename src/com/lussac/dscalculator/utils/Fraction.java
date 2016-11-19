@@ -10,7 +10,7 @@ import android.widget.*;
  * This is the main calculator of this app!
  *
  * 分数四则运算 fraction_分数，numerator_分子，denominator_分母
- * Optimized by Lusaac
+ * Optimized by LussacZheng
  * Source code from : http://m.blog.csdn.net/article/details?id=12446717
  */
 public class Fraction {
@@ -164,7 +164,7 @@ public class Fraction {
 		if (data2.equals("0") || data2.matches("0*\\.0*"))
 			data2 = "0/1"; // useful when exp is "1+0","1-0","1*0","0+1","0-1","0*1","0/1" and so on
 		if (operation.equals("/") && data2.equals("0/1"))
-			return "错误"; // when divided by zero
+			return "ERROR_DIVIDED_BY_ZERO"; // when divided by zero
 
 		Fraction r1 = new Fraction();
 		Fraction r2 = new Fraction();

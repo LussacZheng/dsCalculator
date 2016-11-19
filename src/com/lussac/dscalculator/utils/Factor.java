@@ -1,7 +1,6 @@
 package com.lussac.dscalculator.utils;
 
 import java.util.*;
-import android.widget.*;
 
 //int  -2147483647~2147483647
 //long -9233372036854477808~9233372036854477808
@@ -25,12 +24,12 @@ public class Factor {
 				result = new StringBuilder(result).delete((result.length() - 3), result.length()).toString();
 				return result;
 			} else {
-				return num + "ÊÇÖÊÊı,²»ÄÜ½øĞĞÒòÊ½·Ö½â\nÕÇ×ËÊÆÁË°É";
+				return num + "æ˜¯è´¨æ•°ï¼Œä¸èƒ½è¿›è¡Œå› å¼åˆ†è§£\næ¶¨å§¿åŠ¿äº†å§";
 			}
 		} else if (num == 2147483647) {
-			return "Äã¸ö¡¡Ë¿£¬ÀÏ×ÓÔç¾ÍÁÏµ½Äã»áÊÔÕâ¸ö¡£\n²»ÓÃËãÁË£¬2147483647ÊÇ¸öÖÊÊı£¬\n²»ĞÅÄã×Ô¼ºËã°¡";
+			return "ä½ ä¸ªã€€ä¸ï¼Œè€å­æ—©å°±æ–™åˆ°ä½ ä¼šè¯•è¿™ä¸ªã€‚\nä¸ç”¨ç®—äº†ï¼Œ2147483647æ˜¯ä¸ªè´¨æ•°ï¼Œ\nä¸ä¿¡ä½ è‡ªå·±ç®—å•Š";
 		} else {
-			return "Á¬" + num + "Äã»¹Òª·Ö½â£¬Äã¸ö¡¡Ë¿";
+			return "è¿" + num + "ä½ è¿˜è¦åˆ†è§£ï¼Œä½ ä¸ªã€€ä¸";
 		}
 	}
 

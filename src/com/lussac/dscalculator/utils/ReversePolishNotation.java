@@ -19,9 +19,9 @@ public class ReversePolishNotation {
 					if (num != "") {
 						result.add(num);
 					}
-					if ("¡Á".equals(String.valueOf((str.charAt(i))))) {
+					if ("Ã—".equals(String.valueOf((str.charAt(i))))) {
 						result.add("*");
-					} else if ("¡Â".equals(String.valueOf((str.charAt(i))))) {
+					} else if ("Ã·".equals(String.valueOf((str.charAt(i))))) {
 						result.add("/");
 					} else {
 						result.add(str.charAt(i) + "");
@@ -92,8 +92,8 @@ public class ReversePolishNotation {
 				String back = stack.pop();
 				String front = stack.pop();
 				String res = new Fraction().compute(front, postOrder.get(i), back);
-				if (res.equals("´íÎó")) {
-					return "´íÎó";
+				if (res.equals("ERROR_DIVIDED_BY_ZERO")) {
+					return "ERROR_DIVIDED_BY_ZERO";
 				}
 				stack.push(res);
 			}
@@ -101,11 +101,11 @@ public class ReversePolishNotation {
 		return stack.pop();
 	}
 
-	// ·½·¨·â×°£¬·µ»Ø FractionÀà_·ÖÊıĞÎÊ½ µÄ½á¹û
+	// æ–¹æ³•å°è£…ï¼Œè¿”å› Fractionç±»_åˆ†æ•°å½¢å¼ çš„ç»“æœ
 	public String calculate(String exp) {
 		ReversePolishNotation rpn = new ReversePolishNotation();
-		ArrayList<String> arrayList = rpn.toArraryList(exp); // String×ª»»ÎªArrayList
-		ArrayList<String> result = rpn.toPostOrder(arrayList); // ÖĞ×º±í´ïÊ½±äÎªºó×º±í´ïÊ½
+		ArrayList<String> arrayList = rpn.toArraryList(exp); // Stringè½¬æ¢ä¸ºArrayList
+		ArrayList<String> result = rpn.toPostOrder(arrayList); // ä¸­ç¼€è¡¨è¾¾å¼å˜ä¸ºåç¼€è¡¨è¾¾å¼
 		return rpn.computeInside(result);
 	}
 

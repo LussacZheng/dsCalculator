@@ -58,7 +58,7 @@ public class Prime {
 			listPrime();
 		else
 			countPrime();
-		tv_result.setText("[" + a + "," + b + "] ÄÚ¹²ÓĞ" + count + "¸öÖÊÊı\n²»ĞÅÄã×Ô¼ºÊı°¡");
+		tv_result.setText("[" + a + "," + b + "] å†…å…±æœ‰" + count + "ä¸ªè´¨æ•°\nä¸ä¿¡ä½ è‡ªå·±æ•°å•Š");
 		return str;
 	}
 

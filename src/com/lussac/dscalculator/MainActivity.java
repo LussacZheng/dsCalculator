@@ -155,7 +155,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		mainMenu_prime.setOnLongClickListener(new OnLongClickListener() {
 			@Override
 			public boolean onLongClick(View v) {
-				Intent intent = new Intent(MainActivity.this, LabPrime_Activity.class);
+				Intent intent = new Intent(MainActivity.this, Lab_Activity.class);
+				intent.putExtra("showWhichFragment", 0);
 				startActivity(intent);
 				return true;
 			}
@@ -164,7 +165,18 @@ public class MainActivity extends Activity implements OnClickListener {
 		mainMenu_factor.setOnLongClickListener(new OnLongClickListener() {
 			@Override
 			public boolean onLongClick(View v) {
-				Intent intent = new Intent(MainActivity.this, LabFactor_Activity.class);
+				Intent intent = new Intent(MainActivity.this, Lab_Activity.class);
+				intent.putExtra("showWhichFragment", 1);
+				startActivity(intent);
+				return true;
+			}
+		});
+		
+		mainMenu_random.setOnLongClickListener(new OnLongClickListener() {
+			@Override
+			public boolean onLongClick(View v) {
+				Intent intent = new Intent(MainActivity.this, Lab_Activity.class);
+				intent.putExtra("showWhichFragment", 2);
 				startActivity(intent);
 				return true;
 			}
@@ -270,7 +282,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		if (!exp.matches("[\\-+]?\\d+\\.\\d+")) {// [-+]?\\d+\\.\\d*|[-+]?\\d*\\.\\d+")){
 			String fianlResult = new ReversePolishNotation().calculate(exp);
-			if (fianlResult.equals("错误")) {
+			if (fianlResult.equals("ERROR_DIVIDED_BY_ZERO")) {
 				tv_fractionAnswer.setTextSize(15);
 				tv_fractionAnswer.setTextColor(Color.rgb(102, 255, 255));
 				tv_fractionAnswer.setText("除数不能为零，屌丝!");
@@ -376,7 +388,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		builder.setNeutralButton("切换至主界面", new DialogInterface.OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which){
-				Intent intent = new Intent(MainActivity.this, LabPrime_Activity.class);
+				Intent intent = new Intent(MainActivity.this, Lab_Activity.class);
+				intent.putExtra("showWhichFragment", 0);
 				startActivity(intent);
 			};
 		});
@@ -422,7 +435,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		builder.setNeutralButton("切换至主界面", new DialogInterface.OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which){
-				Intent intent = new Intent(MainActivity.this, LabFactor_Activity.class);
+				Intent intent = new Intent(MainActivity.this, Lab_Activity.class);
+				intent.putExtra("showWhichFragment", 1);
 				startActivity(intent);
 			};
 		});
@@ -449,6 +463,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		builder.setTitle(R.string.Lab_random);
 		builder.setView(view);
 		builder.create();
+		builder.setNeutralButton("切换至主界面", new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface dialog, int which){
+				Intent intent = new Intent(MainActivity.this, Lab_Activity.class);
+				intent.putExtra("showWhichFragment", 2);
+				startActivity(intent);
+			};
+		});
 		
 		final EditText et_Lab_randomUp = (EditText)view.findViewById(R.id.et_Lab_randomUp);
 		final EditText et_Lab_randomDown = (EditText)view.findViewById(R.id.et_Lab_randomDown);;
